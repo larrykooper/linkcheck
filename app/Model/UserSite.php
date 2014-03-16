@@ -38,7 +38,7 @@ class UserSite extends AppModel {
  */
 	public $belongsTo = array(
 		'Url' => array(
-			'className' => 'Url',
+			'className' => 'URL',
 			'foreignKey' => 'URLID',
 			'conditions' => '',
 			'fields' => '',
