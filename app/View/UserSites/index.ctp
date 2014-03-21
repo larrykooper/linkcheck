@@ -107,7 +107,7 @@
                 <td class="actions">
                     <?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $userSite['UserSite']['UserSiteID'])); ?>
 
-                    <form action="/larrybeth/bookmarks/linkcheck/UserSites/delete/<?php echo $userSite['UserSite']['UserSiteID']; ?>" name="post_<?php echo $userSite['UserSite']['UserSiteID']; ?>" id="post_<?php echo $userSite['UserSite']['UserSiteID']; ?>" style="display:none;" method="post">        
+                    <form action="/linkcheck/UserSites/delete/<?php echo $userSite['UserSite']['UserSiteID']; ?>" name="post_<?php echo $userSite['UserSite']['UserSiteID']; ?>" id="post_<?php echo $userSite['UserSite']['UserSiteID']; ?>" style="display:none;" method="post">        
                         <input type="hidden" name="_method" value="POST"/>
                         <input type="hidden" name="redirect-url" value="<?php echo $myUrl ?>">
                     </form>
