@@ -4,7 +4,7 @@ App::uses('AppModel', 'Model');
  * URL Model
  *
  */
-class URL extends AppModel {
+class Url extends AppModel {
 
 /**
  * Use table
