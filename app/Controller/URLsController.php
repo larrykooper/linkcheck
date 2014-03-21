@@ -78,7 +78,7 @@ class UrlsController extends AppController {
                 $this->Session->setFlash(__('The u r l could not be saved. Please, try again.'));
             }
         } else {
-            $options = array('conditions' => array('URL.' . $this->Url->primaryKey => $id));
+            $options = array('conditions' => array('Url.' . $this->Url->primaryKey => $id));
             $this->request->data = $this->Url->find('first', $options);
         }
     }
