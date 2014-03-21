@@ -6,7 +6,7 @@ App::uses('AppController', 'Controller');
  * @property URL $URL
  * @property PaginatorComponent $Paginator
  */
-class URLsController extends AppController {
+class UrlsController extends AppController {
 
 
 /**
@@ -67,7 +67,7 @@ class URLsController extends AppController {
  * @return void
  */
     public function edit($id = null) {
-        if (!$this->URL->exists($id)) {
+        if (!$this->Url->exists($id)) {
             throw new NotFoundException(__('Invalid u r l'));
         }
         if ($this->request->is(array('post', 'put'))) {
@@ -78,8 +78,8 @@ class URLsController extends AppController {
                 $this->Session->setFlash(__('The u r l could not be saved. Please, try again.'));
             }
         } else {
-            $options = array('conditions' => array('URL.' . $this->URL->primaryKey => $id));
-            $this->request->data = $this->URL->find('first', $options);
+            $options = array('conditions' => array('URL.' . $this->Url->primaryKey => $id));
+            $this->request->data = $this->Url->find('first', $options);
         }
     }
 

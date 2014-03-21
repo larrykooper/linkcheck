@@ -1,5 +1,5 @@
 <div class="uRLs form">
-<?php echo $this->Form->create('URL'); ?>
+<?php echo $this->Form->create('Url'); ?>
 	<fieldset>
 		<legend><?php echo __('Edit U R L'); ?></legend>
 	<?php
