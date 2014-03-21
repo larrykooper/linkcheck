@@ -43,7 +43,7 @@ class UserSitesController extends AppController {
         $this->UserSite->unbindModel( array('belongsTo' => array('User')));
         $paginator_conditions = array('UserSite.UserID' => $this->loggedInUser, "NOT ISNULL(Url.LastChecked)");
         if ($http_code != '') {
-            $paginator_conditions['URL.HttpCode'] = $http_code;
+            $paginator_conditions['Url.HttpCode'] = $http_code;
         }
         $data = $this->Paginator->paginate(
             'UserSite', $paginator_conditions);
