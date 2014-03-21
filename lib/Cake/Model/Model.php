@@ -2775,6 +2775,9 @@ class Model extends Object implements CakeEventListener {
 			return false;
 		}
 
+        $myAlias = print_r($this->alias, true);
+        $this->log("Message 541: $myAlias" ,'debug');
+
 		return (bool)$this->find('count', array(
 			'conditions' => array(
 				$this->alias . '.' . $this->primaryKey => $id

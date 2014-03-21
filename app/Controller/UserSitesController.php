@@ -32,12 +32,7 @@ class UserSitesController extends AppController {
  * @return void
  */
     public function index($http_code = null) {
-        $this->log("Message 57: In index action", 'debug');
-        
         $authUser = $this->Session->read('Auth.User');
-        $this->log($authUser, 'debug');
-
-        $this->log("http code: $http_code", 'debug');
         $this->loggedInUser = $authUser['UserID'];
         $this->UserSite->recursive = 1;
         $this->UserSite->unbindModel( array('belongsTo' => array('User')));
