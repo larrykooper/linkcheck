@@ -16,19 +16,6 @@ class URLsController extends AppController {
  */
     public $components = array('Paginator', 'Session');
 
-    public function beforeFilter() {
-
-        $this->log("we are in before filter", 'debug');
-        require('../../../ckuser.php');
-        if (!$validated) {
-             $this->log("not validated", 'debug');
-             // If not validated, I want to redirect to some "jail page"            
-             return $this->redirect(array('controller' => 'some_controller', 'action' => 'index'));
-        } else {
-            $this->log("validated", 'debug');
-        }
-
-    }
 
 /**
  * index method
