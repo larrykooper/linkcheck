@@ -71,9 +71,9 @@ class UrlsController extends AppController {
             throw new NotFoundException(__('Invalid u r l'));
         }
         if ($this->request->is(array('post', 'put'))) {
-            if ($this->URL->save($this->request->data)) {
+            if ($this->Url->save($this->request->data)) {
                 $this->Session->setFlash(__('The u r l has been saved.'));
-                return $this->redirect(array('action' => 'index'));
+                return $this->redirect(array('controller' => 'UserSites', 'action' => 'index'));
             } else {
                 $this->Session->setFlash(__('The u r l could not be saved. Please, try again.'));
             }
