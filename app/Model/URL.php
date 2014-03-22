@@ -62,7 +62,7 @@ class Url extends AppModel {
 	);
 
     public function changeUrlToRedirectLocation($id) {
-        $options = array('conditions' => array('URL.' . $this->primaryKey => $id));
+        $options = array('conditions' => array('Url.' . $this->primaryKey => $id));
         $myURL = $this->find('first', $options);
         $myURL['Url']['Url'] = $myURL['Url']['RedirectLocation'];
         $this->log("Message 18: about to save", 'debug');

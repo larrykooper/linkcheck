@@ -84,6 +84,7 @@ class UrlsController extends AppController {
     }
 
     public function changeUrlToRedirectLocation($id) {
+        $this->loadModel('URL');
         $urlInfo = $this->Url->changeUrlToRedirectLocation($id);
         $this->autoRender = false;
         $this->layout = 'ajax';        
