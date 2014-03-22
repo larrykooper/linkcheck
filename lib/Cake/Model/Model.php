@@ -671,13 +671,6 @@ class Model extends Object implements CakeEventListener {
 	public function __construct($id = false, $table = null, $ds = null) {
 		parent::__construct();
 
-        // This is a hack; we'd rather have this be the correct model
-        if ($id['class'] == 'Url') {
-            $this->useTable = 'URL';
-            $this->primaryKey = 'URLID';
-        }
-        // End of hack
-
 		if (is_array($id)) {
 			extract(array_merge(
 				array(

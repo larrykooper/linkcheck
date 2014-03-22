@@ -67,6 +67,7 @@ class UrlsController extends AppController {
  * @return void
  */
     public function edit($id = null) {
+        $this->loadModel('URL');
         if (!$this->Url->exists($id)) {
             throw new NotFoundException(__('Invalid u r l'));
         }
