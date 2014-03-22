@@ -64,11 +64,11 @@ class Url extends AppModel {
     public function changeUrlToRedirectLocation($id) {
         $options = array('conditions' => array('URL.' . $this->primaryKey => $id));
         $myURL = $this->find('first', $options);
-        $myURL['URL']['URL'] = $myURL['URL']['RedirectLocation'];
+        $myURL['Url']['Url'] = $myURL['Url']['RedirectLocation'];
         $this->log("Message 18: about to save", 'debug');
         $this->save($myURL);
         $this->log("Message 19: saved", 'debug');
-        $retval = array('id' => $id, 'newUrl' => $myURL['URL']['RedirectLocation']);
+        $retval = array('id' => $id, 'newUrl' => $myURL['Url']['RedirectLocation']);
         return $retval;
     }
 

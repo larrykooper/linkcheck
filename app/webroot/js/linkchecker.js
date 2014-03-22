@@ -1,7 +1,7 @@
 var setUrlToRedirect = function (URLID) {
     console.log("message 24: about to do ajax call");
     var promise = $.ajax({
-        url: linkchecker.baseUrl + "urls/changeUrlToRedirectLocation/" + URLID,
+        url: linkchecker.baseUrl + "Urls/changeUrlToRedirectLocation/" + URLID,
         type: 'POST',
         dataType: 'HTML'
     });
